@@ -1,0 +1,240 @@
+/* =========================================
+   1. GLOBAL BASE & LAYOUT
+   Used on: All Pages
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    /* Matches the off-white/light gray background */
+    background-color: #F4F4F4; 
+    color: #000;
+    padding: 20px 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main wrapper to keep layout contained and aligned */
+.container {
+    max-width: 1400px; /* Adjusts to standard wide desktop */
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1; /* Takes up remaining vertical space to push footer down */
+    display: flex;
+}
+
+/* =========================================
+   2. REUSABLE UI COMPONENTS
+   Used on: All Pages
+   ========================================= */
+/* --- Buttons --- */
+.btn {
+    padding: 12px 35px;
+    border-radius: 30px; /* Pill shape */
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-login {
+    background-color: #CBA4E8;
+    color: #000;
+}
+
+.btn-register {
+    background-color: #35323A; /* Dark charcoal/gray */
+    color: #D6B9F0; /* Light purple text */
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #35323A;
+    color: #D6B9F0;
+}
+
+/* =========================================
+   3. HEADER & FOOTER
+   Used on: All Pages
+   ========================================= */
+/* --- Header --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.logo-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between "Skincare" and "Scan" */
+}
+
+.logo-title {
+    font-size: 4.5rem;
+    color: #CBA4E8; /* The signature light purple */
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 0.9;
+}
+
+.logo-subtitle {
+    font-size: 1.8rem;
+    color: #222;
+    font-weight: 400;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px; 
+}
+
+/* --- Footer --- */
+.footer {
+    margin-top: 60px;
+    padding-bottom: 30px;
+}
+
+.footer-logo {
+    font-size: 2.2rem; /* Scaled down logo for footer */
+    color: #CBA4E8;
+    letter-spacing: -0.5px;
+}
+
+/* =========================================
+   4. NAVIGATION BAR
+   Used on: All Pages
+   ========================================= */
+.navbar {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 2px; /* Creates the small white separators between tabs */
+    width: 100%;
+}
+
+.nav-item {
+    flex: 1; /* Distributes tabs evenly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #E6DCF5; /* Light purple inactive state */
+    color: #000;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 0.95rem;
+}
+
+.nav-icon {
+    font-size: 0.8rem;
+}
+
+/* Active Tab Styling */
+.nav-item.active {
+    background-color: #635C6D; /* Dark gray */
+    color: #FFF;
+}
+
+/* Rounded corners for the extreme ends of the navbar */
+.nav-item:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.nav-item:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* =========================================
+   5. CONTENT PAGES
+   Used on: index.html, quiz.html, scanner.html, about.html, past-results.html
+   ========================================= */
+.info-card {
+    background-color: #E2D3F2; /* Light purple card background */
+    border: 2px solid #2B144E; /* Deep purple border */
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 320px; 
+    height: fit-content;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #000;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 2; /* High line-height for readability */
+    text-align: center;
+    color: #111;
+}
+
+/* =========================================
+   6. AUTHENTICATION PAGES
+   Used on: login.html, register.html
+   ========================================= */
+.form-card {
+    background-color: #E2D3F2;
+    border: 2px solid #2B144E;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2B144E;
+}
+
+.form-group input {
+    padding: 12px 15px;
+    border: 1px solid #2B144E;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #CBA4E8;
+    box-shadow: 0 0 5px rgba(203, 164, 232, 0.5);
+}

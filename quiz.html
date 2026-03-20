@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Skincare Scan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+            <div class="logo-group">
+                <h1 class="logo-title">Skincare</h1>
+                <h2 class="logo-subtitle">Scan</h2>
+            </div>
+            
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Log In</a>
+                <a href="register.html" class="btn btn-register">Register</a>
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <a href="index.html" class="nav-item"><span class="nav-icon">&#8859;</span> Home</a>
+            <a href="quiz.html" class="nav-item active"><span class="nav-icon">&#8859;</span> Quiz</a>
+            <a href="scanner.html" class="nav-item"><span class="nav-icon">&#8859;</span> Scanner</a>
+            <a href="about.html" class="nav-item"><span class="nav-icon">&#8859;</span> About Me</a>
+            <a href="past-results.html" class="nav-item"><span class="nav-icon">&#8859;</span> Past Results</a>
+        </nav>
+
+        <main class="main-content">
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar" style="width: 25%;"></div>
+                </div>
+                <span class="step-text">Question 1 of 4</span>
+                
+                <h3 class="quiz-question">How would you describe your skin type?</h3>
+                
+                <form class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="skin_type" value="oily">
+                        <span class="option-text">Oily (Shiny all over)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="skin_type" value="dry">
+                        <span class="option-text">Dry (Tight, flaky, or rough)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="skin_type" value="combination">
+                        <span class="option-text">Combination (Oily T-zone, dry cheeks)</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="skin_type" value="normal">
+                        <span class="option-text">Normal (Balanced, rarely breaks out)</span>
+                    </label>
+                </form>
+
+                <div class="quiz-nav-buttons">
+                    <button class="btn btn-register">Next Step &rarr;</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <h1 class="logo-title footer-logo">Skincare</h1>
+        </footer>
+        
+    </div>
+</body>
+</html>
